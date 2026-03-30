@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matriz de posicionamiento comunicativo 17M</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fff;padding:16px;}
+.mx{max-width:680px;margin:0 auto;}
+h3{font-size:1rem;font-weight:700;margin-bottom:4px;color:#111;}
+.subtit{font-size:0.82rem;color:#666;margin-bottom:12px;}
+.grid17{position:relative;width:100%;aspect-ratio:1.15/1;min-height:340px;max-height:480px;
+  border:1px solid #ddd;border-radius:10px;overflow:hidden;background:#fafafa;touch-action:none;}
+.q17{position:absolute;width:50%;height:50%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:2px;pointer-events:none;}
+.q17 span{font-size:10px;color:#aaa;letter-spacing:0.3px;}
+.q17 .ql17{font-weight:600;font-size:11px;color:#888;}
+.qtl17{top:0;left:0}.qtr17{top:0;right:0}.qbl17{bottom:0;left:0}.qbr17{bottom:0;right:0}
+.axh17{position:absolute;width:100%;height:0;top:50%;left:0;border-top:1px dashed #ccc;pointer-events:none;}
+.axv17{position:absolute;height:100%;width:0;left:50%;top:0;border-left:1px dashed #ccc;pointer-events:none;}
+.al17{position:absolute;font-size:10px;font-weight:600;color:#777;pointer-events:none;white-space:nowrap;}
+.at17{top:8px;left:50%;transform:translateX(-50%)}
+.ab17{bottom:8px;left:50%;transform:translateX(-50%)}
+.all17{left:8px;top:50%;transform:translateY(-50%) rotate(-90deg)}
+.ar17{right:8px;top:50%;transform:translateY(-50%) rotate(90deg)}
+.cd17{position:absolute;transform:translate(-50%,-50%);cursor:grab;user-select:none;z-index:10;-webkit-user-select:none;}
+.cd17:active{cursor:grabbing;z-index:100;}
+.dot17{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:600;color:#fff;border:2px solid rgba(255,255,255,0.35);
+  box-shadow:0 2px 6px rgba(0,0,0,0.18);transition:transform 0.12s;}
+.cd17:hover .dot17,.cd17.sel17 .dot17{transform:scale(1.18);box-shadow:0 0 0 3px #4a90e2;}
+.nm17{position:absolute;top:42px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:10px;
+  font-weight:600;color:#222;background:#fff;padding:2px 7px;border-radius:5px;border:1px solid #ddd;
+  pointer-events:none;opacity:0;transition:opacity 0.15s;}
+.cd17:hover .nm17,.cd17.sel17 .nm17{opacity:1;}
+.pan17{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px;}
+.pb17{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border:1px solid #ddd;
+  border-radius:20px;background:#fff;cursor:pointer;font-size:11px;color:#555;
+  transition:border-color 0.15s,background 0.15s;}
+.pb17:hover{border-color:#aaa;background:#f5f5f5;}
+.pb17.act17{border-color:#4a90e2;background:#eef4fd;color:#1a5fa8;}
+.pd17{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.det17{margin-top:10px;padding:12px 14px;border:1px solid #ddd;border-radius:8px;background:#fff;display:none;}
+.det17.vis17{display:block;}
+.det-h17{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+.det-h17 .pd17{width:13px;height:13px;}
+.det-h17 span{font-size:13px;font-weight:600;color:#111;}
+.det-r17{display:grid;grid-template-columns:90px 1fr;gap:4px 10px;font-size:12px;}
+.det-r17 dt{color:#999;}
+.det-r17 dd{color:#444;}
+.dx17{margin-top:10px;padding:14px;border:1px solid #e0e0e0;border-radius:8px;background:#f9f9f9;}
+.dx-t17{font-size:12px;font-weight:700;color:#333;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px;}
+.dx-c17{font-size:12px;color:#555;line-height:1.65;}
+.dx-c17 p{margin-bottom:6px;}
+.tag17{display:inline-block;font-size:10px;padding:1px 7px;border-radius:3px;font-weight:700;margin-right:4px;}
+.tag-sat17{background:#fde8e8;color:#c0392b;}
+.tag-gap17{background:#e8f8e8;color:#1e7e34;}
+.tag-react17{background:#fff3cd;color:#856404;}
+.tag-over17{background:#e8f0fe;color:#1a56db;}
+.inst17{margin-top:8px;font-size:11px;color:#aaa;line-height:1.5;}
+.src17{margin-top:10px;font-size:10px;color:#bbb;text-align:right;}
+</style>
+</head>
+<body>
+<div class="mx">
+  <h3>Matriz de posicionamiento comunicativo &middot; 17M Andaluc&iacute;a</h3>
+  <p class="subtit">Arrastra los candidatos o haz clic para ver su diagn&oacute;stico comunicativo</p>
+
+  <div class="grid17" id="G17">
+    <div class="q17 qtl17"><span class="ql17">Emocional + Marco propio</span><span>Liderazgo narrativo</span></div>
+    <div class="q17 qtr17"><span class="ql17">Emocional + Reactivo</span><span>Responde desde la emoci&oacute;n</span></div>
+    <div class="q17 qbl17"><span class="ql17">Racional + Marco propio</span><span>El espacio del gestor</span></div>
+    <div class="q17 qbr17"><span class="ql17">Racional + Reactivo</span><span>Responde con datos al marco ajeno</span></div>
+    <div class="axh17"></div>
+    <div class="axv17"></div>
+    <span class="al17 at17">EMOCIONAL</span>
+    <span class="al17 ab17">RACIONAL</span>
+    <span class="al17 all17">MARCO PROPIO</span>
+    <span class="al17 ar17">REACTIVO</span>
+  </div>
+
+  <div class="pan17" id="P17"></div>
+  <div class="det17" id="D17"></div>
+  <div class="dx17"><div class="dx-t17">Diagnostico</div><div class="dx-c17" id="DX17"></div></div>
+  <p class="inst17">Arrastra los candidatos para reposicionar. Haz clic para ver la ficha. El diagn&oacute;stico se recalcula en tiempo real.</p>
+  <p class="src17">Fuente: Elaboraci&oacute;n propia &middot; InfoPol&iacute;tica</p>
+</div>
+
+<script>
+(function(){
+const C=[
+  {id:'moreno',nm:'Moreno Bonilla',sh:'MB',cl:'#185FA5',x:32,y:65,
+   frame:'Gestion, estabilidad, serenidad',
+   risk:'La crisis sanitaria lo empuja fuera de su cuadrante natural',
+   edge:'Ocupa solo el espacio racional - nadie le disputa',
+   tone:'Racional',orient:'Marco propio'},
+  {id:'montero',nm:'M. Jesus Montero',sh:'MJM',cl:'#D85A30',x:28,y:25,
+   frame:'Sanidad como derecho - referendum sanitario',
+   risk:'Frame monotematico; llega tarde al territorio',
+   edge:'Potencia del issue dominante si controla la agenda',
+   tone:'Emocional',orient:'Marco propio'},
+  {id:'garcia',nm:'Jose I. Garcia',sh:'JIG',cl:'#0F6E56',x:18,y:20,
+   frame:'Clase social, proximidad, barrio obrero',
+   risk:'Partido pequeno, riesgo de invisibilidad mediatica',
+   edge:'Coherencia de registro; cuadrante poco disputado',
+   tone:'Emocional',orient:'Marco propio'},
+  {id:'gavira',nm:'Manuel Gavira',sh:'MG',cl:'#A32D2D',x:22,y:30,
+   frame:'Identidad, orden, anti-izquierda',
+   risk:'Predecible - sin innovacion comunicativa',
+   edge:'Electorado mas fiel; solo necesita movilizar',
+   tone:'Emocional',orient:'Marco propio'},
+  {id:'maillo',nm:'Antonio Maillo',sh:'AM',cl:'#534AB7',x:62,y:28,
+   frame:'Unidad de la izquierda, voluntariado',
+   risk:'Se solapa con Garcia y Montero en servicios publicos',
+   edge:'Conocimiento territorial; perfil conciliador',
+   tone:'Emocional',orient:'Reactivo'},
+  {id:'delgado',nm:'J. A. Delgado',sh:'JAD',cl:'#D4537E',x:68,y:35,
+   frame:'Izquierda valiente - autodefinicion',
+   risk:'Semanas invertidas en negociaciones, no en mensaje',
+   edge:'Marca reconocible entre su base fiel',
+   tone:'Emocional',orient:'Reactivo'}
+];
+
+const G=document.getElementById('G17'),P=document.getElementById('P17'),Det=document.getElementById('D17'),DX=document.getElementById('DX17');
+let sel=null;
+
+C.forEach(c=>{
+  const el=document.createElement('div');
+  el.className='cd17';el.id='c17-'+c.id;
+  el.style.left=c.x+'%';el.style.top=c.y+'%';
+  el.dataset.x=c.x;el.dataset.y=c.y;
+  el.innerHTML='<div class="dot17" style="background:'+c.cl+'">'+c.sh+'</div><div class="nm17">'+c.nm+'</div>';
+  let moved=false;
+  el.addEventListener('click',()=>{if(!moved)selectC(c.id);});
+  drag(el,()=>{moved=true;upDX();},()=>{moved=false;});
+  G.appendChild(el);
+  const btn=document.createElement('button');
+  btn.className='pb17';btn.id='pb17-'+c.id;
+  btn.innerHTML='<div class="pd17" style="background:'+c.cl+'"></div>'+c.nm;
+  btn.onclick=()=>selectC(c.id);
+  P.appendChild(btn);
+});
+
+function selectC(id){
+  document.querySelectorAll('.cd17').forEach(e=>e.classList.remove('sel17'));
+  document.querySelectorAll('.pb17').forEach(e=>e.classList.remove('act17'));
+  if(sel===id){sel=null;Det.classList.remove('vis17');return;}
+  sel=id;
+  document.getElementById('c17-'+id).classList.add('sel17');
+  document.getElementById('pb17-'+id).classList.add('act17');
+  const c=C.find(x=>x.id===id);
+  Det.classList.add('vis17');
+  Det.innerHTML='<div class="det-h17"><div class="pd17" style="background:'+c.cl+'"></div><span>'+c.nm+'</span></div>'
+    +'<div class="det-r17">'
+    +'<dt>Frame</dt><dd>'+c.frame+'</dd>'
+    +'<dt>Tono</dt><dd>'+c.tone+'</dd>'
+    +'<dt>Orientacion</dt><dd>'+c.orient+'</dd>'
+    +'<dt>Ventaja</dt><dd>'+c.edge+'</dd>'
+    +'<dt>Riesgo</dt><dd>'+c.risk+'</dd>'
+    +'</div>';
+}
+
+function drag(el,onMove,onStart){
+  let d=false,sx,sy,sl,st;
+  const start=(ex,ey)=>{
+    d=true;if(onStart)onStart();
+    sx=ex;sy=ey;
+    sl=parseFloat(el.style.left);st=parseFloat(el.style.top);
+    el.style.transition='none';
+  };
+  const move=(ex,ey)=>{
+    if(!d)return;
+    const r=G.getBoundingClientRect();
+    const dx=((ex-sx)/r.width)*100,dy=((ey-sy)/r.height)*100;
+    if(Math.abs(dx)>1||Math.abs(dy)>1){if(onMove)onMove();}
+    const nx=Math.max(5,Math.min(95,sl+dx)),ny=Math.max(5,Math.min(95,st+dy));
+    el.style.left=nx+'%';el.style.top=ny+'%';
+    el.dataset.x=nx;el.dataset.y=ny;
+  };
+  const end=()=>{d=false;el.style.transition='';};
+  el.addEventListener('mousedown',e=>{e.preventDefault();start(e.clientX,e.clientY);});
+  el.addEventListener('touchstart',e=>{e.preventDefault();start(e.touches[0].clientX,e.touches[0].clientY);},{passive:false});
+  document.addEventListener('mousemove',e=>{if(d)move(e.clientX,e.clientY);});
+  document.addEventListener('touchmove',e=>{if(d)move(e.touches[0].clientX,e.touches[0].clientY);},{passive:false});
+  document.addEventListener('mouseup',end);
+  document.addEventListener('touchend',end);
+}
+
+function upDX(){
+  const pos=C.map(c=>{
+    const el=document.getElementById('c17-'+c.id);
+    return{nm:c.nm,sh:c.sh,x:parseFloat(el.dataset.x||c.x),y:parseFloat(el.dataset.y||c.y)};
+  });
+  const qn={tl:'emocional + marco propio',tr:'emocional + reactivo',bl:'racional + marco propio',br:'racional + reactivo'};
+  const qs={tl:[],tr:[],bl:[],br:[]};
+  pos.forEach(p=>{const qx=p.x<50?'l':'r',qy=p.y<50?'t':'b';qs[qy+qx].push(p);});
+  let h='';
+  Object.entries(qs).forEach(([k,v])=>{
+    if(v.length>=3)h+='<p><span class="tag17 tag-sat17">Saturacion</span>Tres o mas candidatos en <b>'+qn[k]+'</b>: '+v.map(p=>p.sh).join(', ')+'. Se neutralizan en visibilidad.</p>';
+  });
+  Object.entries(qs).forEach(([k,v])=>{
+    if(v.length===0)h+='<p><span class="tag17 tag-gap17">Hueco</span>El cuadrante <b>'+qn[k]+'</b> esta vacio. Espacio disponible para quien lo reclame.</p>';
+  });
+  const react=pos.filter(p=>p.x>68);
+  if(react.length>0)h+='<p><span class="tag17 tag-react17">Alerta reactiva</span>'+react.map(p=>p.sh).join(', ')+' en zona de alta reactividad.</p>';
+  const pairs=[];
+  for(let i=0;i<pos.length;i++)for(let j=i+1;j<pos.length;j++){
+    const dist=Math.sqrt(Math.pow(pos[i].x-pos[j].x,2)+Math.pow(pos[i].y-pos[j].y,2));
+    if(dist<13)pairs.push([pos[i],pos[j]]);
+  }
+  pairs.forEach(([a,b])=>{h+='<p><span class="tag17 tag-over17">Solapamiento</span>'+a.sh+' y '+b.sh+' compiten por la misma atencion con el mismo registro.</p>';});
+  const lonely=Object.entries(qs).filter(([k,v])=>v.length===1);
+  lonely.forEach(([k,v])=>{h+='<p><span class="tag17 tag-gap17">Diferenciacion</span>'+v[0].sh+' ocupa en solitario el cuadrante <b>'+qn[k]+'</b>. Sin rival directo en ese registro.</p>';});
+  if(!h)h='<p>Distribucion equilibrada. Cada candidato ocupa un espacio comunicativo diferenciado.</p>';
+  DX.innerHTML=h;
+}
+upDX();
+})();
+</script>
+</body>
+</html>
