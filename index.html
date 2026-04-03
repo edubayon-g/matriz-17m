@@ -1,154 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matriz de posicionamiento comunicativo 17M</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-.mx{padding:1rem 0}
-.grid{position:relative;width:100%;aspect-ratio:1.15/1;min-height:420px;max-height:560px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden;background:var(--color-background-primary);touch-action:none}
-.q{position:absolute;width:50%;height:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;pointer-events:none}
-.q span{font-size:11px;color:var(--color-text-tertiary);letter-spacing:0.3px}
-.q .ql{font-weight:500;font-size:12px;color:var(--color-text-secondary)}
-.qtl{top:0;left:0}.qtr{top:0;right:0}.qbl{bottom:0;left:0}.qbr{bottom:0;right:0}
-.ax-h,.ax-v{position:absolute;pointer-events:none}
-.ax-h{width:100%;height:0;top:50%;left:0;border-top:0.5px dashed var(--color-border-secondary)}
-.ax-v{height:100%;width:0;left:50%;top:0;border-left:0.5px dashed var(--color-border-secondary)}
-.al{position:absolute;font-size:11px;font-weight:500;color:var(--color-text-secondary);pointer-events:none;white-space:nowrap}
-.at{top:10px;left:50%;transform:translateX(-50%)}
-.ab{bottom:10px;left:50%;transform:translateX(-50%)}
-.all{left:10px;top:50%;transform:translateY(-50%) rotate(-90deg)}
-.ar{right:10px;top:50%;transform:translateY(-50%) rotate(90deg)}
-.cd{position:absolute;transform:translate(-50%,-50%);cursor:grab;user-select:none;z-index:10;-webkit-user-select:none}
-.cd:active{cursor:grabbing;z-index:100}
-.dot{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:#fff;transition:transform 0.12s;border:2.5px solid rgba(255,255,255,0.25)}
-.cd:hover .dot{transform:scale(1.15)}
-.cd:hover{z-index:50}
-.nm{position:absolute;top:44px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:11px;font-weight:500;color:var(--color-text-primary);background:var(--color-background-primary);padding:2px 8px;border-radius:6px;border:0.5px solid var(--color-border-tertiary);pointer-events:none;opacity:0;transition:opacity 0.15s}
-.cd:hover .nm{opacity:1}
-.fr{position:absolute;top:64px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:10px;color:var(--color-text-tertiary);background:var(--color-background-primary);padding:1px 6px;border-radius:4px;pointer-events:none;opacity:0;transition:opacity 0.15s;max-width:180px;overflow:hidden;text-overflow:ellipsis}
-.cd:hover .fr{opacity:1}
-.sel .nm,.sel .fr{opacity:1!important}
-.sel .dot{transform:scale(1.2);box-shadow:0 0 0 3px var(--color-border-info)}
-.pan{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
-.pb{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);background:var(--color-background-primary);cursor:pointer;font-size:12px;color:var(--color-text-secondary);transition:border-color 0.15s,background 0.15s}
-.pb:hover{border-color:var(--color-border-secondary);background:var(--color-background-secondary)}
-.pb.act{border-color:var(--color-border-info);background:var(--color-background-info)}
-.pb .pd{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.dx{margin-top:12px;padding:16px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);background:var(--color-background-secondary)}
-.dx-t{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:8px}
-.dx-c{font-size:13px;color:var(--color-text-secondary);line-height:1.65}
-.dx-c p{margin-bottom:6px}
-.dx-c p:last-child{margin-bottom:0}
-.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;font-weight:500;margin-right:4px}
-.tag-sat{background:var(--color-background-danger);color:var(--color-text-danger)}
-.tag-gap{background:var(--color-background-success);color:var(--color-text-success)}
-.tag-react{background:var(--color-background-warning);color:var(--color-text-warning)}
-.tag-over{background:var(--color-background-info);color:var(--color-text-info)}
-.det{margin-top:12px;padding:14px 16px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);background:var(--color-background-primary);display:none}
-.det.vis{display:block}
-.det-h{display:flex;align-items:center;gap:8px;margin-bottom:8px}
-.det-h .pd{width:14px;height:14px;border-radius:50%}
-.det-h span{font-size:14px;font-weight:500;color:var(--color-text-primary)}
-.det-r{display:grid;grid-template-columns:100px 1fr;gap:4px 12px;font-size:12px}
-.det-r dt{color:var(--color-text-tertiary)}
-.det-r dd{color:var(--color-text-secondary)}
-.inst{margin-top:8px;font-size:12px;color:var(--color-text-tertiary);line-height:1.5}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fff;padding:16px;}
+.mx{max-width:680px;margin:0 auto;}
+h3{font-size:1rem;font-weight:700;margin-bottom:4px;color:#111;}
+.subtit{font-size:0.82rem;color:#666;margin-bottom:12px;}
+.grid17{position:relative;width:100%;aspect-ratio:1.15/1;min-height:340px;max-height:480px;
+  border:1px solid #ddd;border-radius:10px;overflow:hidden;background:#fafafa;touch-action:none;}
+.q17{position:absolute;width:50%;height:50%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:2px;pointer-events:none;}
+.q17 span{font-size:10px;color:#aaa;letter-spacing:0.3px;}
+.q17 .ql17{font-weight:600;font-size:11px;color:#888;}
+.qtl17{top:0;left:0}.qtr17{top:0;right:0}.qbl17{bottom:0;left:0}.qbr17{bottom:0;right:0}
+.axh17{position:absolute;width:100%;height:0;top:50%;left:0;border-top:1px dashed #ccc;pointer-events:none;}
+.axv17{position:absolute;height:100%;width:0;left:50%;top:0;border-left:1px dashed #ccc;pointer-events:none;}
+.al17{position:absolute;font-size:10px;font-weight:600;color:#777;pointer-events:none;white-space:nowrap;}
+.at17{top:8px;left:50%;transform:translateX(-50%)}
+.ab17{bottom:8px;left:50%;transform:translateX(-50%)}
+.all17{left:8px;top:50%;transform:translateY(-50%) rotate(-90deg)}
+.ar17{right:8px;top:50%;transform:translateY(-50%) rotate(90deg)}
+.cd17{position:absolute;transform:translate(-50%,-50%);cursor:grab;user-select:none;z-index:10;-webkit-user-select:none;}
+.cd17:active{cursor:grabbing;z-index:100;}
+.dot17{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:600;color:#fff;border:2px solid rgba(255,255,255,0.35);
+  box-shadow:0 2px 6px rgba(0,0,0,0.18);transition:transform 0.12s;}
+.cd17:hover .dot17,.cd17.sel17 .dot17{transform:scale(1.18);box-shadow:0 0 0 3px #4a90e2;}
+.nm17{position:absolute;top:42px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:10px;
+  font-weight:600;color:#222;background:#fff;padding:2px 7px;border-radius:5px;border:1px solid #ddd;
+  pointer-events:none;opacity:0;transition:opacity 0.15s;}
+.cd17:hover .nm17,.cd17.sel17 .nm17{opacity:1;}
+.pan17{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px;}
+.pb17{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border:1px solid #ddd;
+  border-radius:20px;background:#fff;cursor:pointer;font-size:11px;color:#555;
+  transition:border-color 0.15s,background 0.15s;}
+.pb17:hover{border-color:#aaa;background:#f5f5f5;}
+.pb17.act17{border-color:#4a90e2;background:#eef4fd;color:#1a5fa8;}
+.pd17{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.det17{margin-top:10px;padding:12px 14px;border:1px solid #ddd;border-radius:8px;background:#fff;display:none;}
+.det17.vis17{display:block;}
+.det-h17{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+.det-h17 .pd17{width:13px;height:13px;}
+.det-h17 span{font-size:13px;font-weight:600;color:#111;}
+.det-r17{display:grid;grid-template-columns:90px 1fr;gap:4px 10px;font-size:12px;}
+.det-r17 dt{color:#999;}
+.det-r17 dd{color:#444;}
+.dx17{margin-top:10px;padding:14px;border:1px solid #e0e0e0;border-radius:8px;background:#f9f9f9;}
+.dx-t17{font-size:12px;font-weight:700;color:#333;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px;}
+.dx-c17{font-size:12px;color:#555;line-height:1.65;}
+.dx-c17 p{margin-bottom:6px;}
+.tag17{display:inline-block;font-size:10px;padding:1px 7px;border-radius:3px;font-weight:700;margin-right:4px;}
+.tag-sat17{background:#fde8e8;color:#c0392b;}
+.tag-gap17{background:#e8f8e8;color:#1e7e34;}
+.tag-react17{background:#fff3cd;color:#856404;}
+.tag-over17{background:#e8f0fe;color:#1a56db;}
+.inst17{margin-top:8px;font-size:11px;color:#aaa;line-height:1.5;}
+.src17{margin-top:10px;font-size:10px;color:#bbb;text-align:right;}
 </style>
-
+</head>
+<body>
 <div class="mx">
-<div class="grid" id="G">
-  <div class="q qtl"><span class="ql">Emocional + propio</span><span>El espacio del liderazgo narrativo</span></div>
-  <div class="q qtr"><span class="ql">Emocional + reactivo</span><span>Responde desde la emoci\u00f3n</span></div>
-  <div class="q qbl"><span class="ql">Racional + propio</span><span>El espacio del gestor</span></div>
-  <div class="q qbr"><span class="ql">Racional + reactivo</span><span>Responde con datos al marco ajeno</span></div>
-  <div class="ax-h"></div>
-  <div class="ax-v"></div>
-  <span class="al at">Emocional</span>
-  <span class="al ab">Racional</span>
-  <span class="al all">Marco propio</span>
-  <span class="al ar">Reactivo</span>
-</div>
-<div class="pan" id="P"></div>
-<div class="det" id="D"></div>
-<div class="dx"><div class="dx-t">Diagn\u00f3stico</div><div class="dx-c" id="DX"></div></div>
-<p class="inst">Arrastra los candidatos para reposicionar. Haz clic en uno para ver su ficha. El diagn\u00f3stico se recalcula en tiempo real.</p>
+  <h3>Matriz de posicionamiento comunicativo &middot; 17M Andaluc&iacute;a</h3>
+  <p class="subtit">Arrastra los candidatos o haz clic para ver su diagn&oacute;stico comunicativo</p>
+
+  <div class="grid17" id="G17">
+    <div class="q17 qtl17"><span class="ql17">Emocional + Marco propio</span><span>Liderazgo narrativo</span></div>
+    <div class="q17 qtr17"><span class="ql17">Emocional + Reactivo</span><span>Responde desde la emoci&oacute;n</span></div>
+    <div class="q17 qbl17"><span class="ql17">Racional + Marco propio</span><span>El espacio del gestor</span></div>
+    <div class="q17 qbr17"><span class="ql17">Racional + Reactivo</span><span>Responde con datos al marco ajeno</span></div>
+    <div class="axh17"></div>
+    <div class="axv17"></div>
+    <span class="al17 at17">EMOCIONAL</span>
+    <span class="al17 ab17">RACIONAL</span>
+    <span class="al17 all17">MARCO PROPIO</span>
+    <span class="al17 ar17">REACTIVO</span>
+  </div>
+
+  <div class="pan17" id="P17"></div>
+  <div class="det17" id="D17"></div>
+  <div class="dx17"><div class="dx-t17">Diagnostico</div><div class="dx-c17" id="DX17"></div></div>
+  <p class="inst17">Arrastra los candidatos para reposicionar. Haz clic para ver la ficha. El diagnostico se recalcula en tiempo real.</p>
+  <p class="src17">Fuente: Elaboraci&oacute;n propia &middot; InfoPol&iacute;tica</p>
 </div>
 
 <script>
+(function(){
 const C=[
-{id:'moreno',nm:'Moreno Bonilla',sh:'MB',cl:'#185FA5',x:32,y:65,frame:'Gesti\u00f3n, estabilidad, serenidad',risk:'La crisis sanitaria lo empuja fuera de su cuadrante natural',edge:'Ocupa solo el espacio racional \u2014 nadie le disputa',tone:'Racional',orient:'Marco propio'},
-{id:'montero',nm:'M.\u00aa Jes\u00fas Montero',sh:'MJM',cl:'#D85A30',x:28,y:25,frame:'Sanidad como derecho \u2014 refer\u00e9ndum sanitario',risk:'Frame monotem\u00e1tico; pasivo como exconsejera de Salud',edge:'Potencia del issue dominante si controla la agenda',tone:'Emocional',orient:'Marco propio'},
-{id:'garcia',nm:'Jos\u00e9 I. Garc\u00eda',sh:'JIG',cl:'#0F6E56',x:18,y:20,frame:'Clase social, proximidad, barrio obrero',risk:'Partido peque\u00f1o, riesgo de invisibilidad medi\u00e1tica',edge:'Coherencia de registro; posici\u00f3n m\u00e1s diferenciada de la izquierda',tone:'Emocional',orient:'Marco propio'},
-{id:'maillo',nm:'Antonio Ma\u00edllo',sh:'AM',cl:'#534AB7',x:42,y:28,frame:'Unidad de la izquierda, alternativa al PP',risk:'Semanas consumidas en negociaci\u00f3n; falta relato propio m\u00e1s all\u00e1 de la coalici\u00f3n',edge:'Conocimiento territorial; coalici\u00f3n de siete partidos cerrada',tone:'Emocional',orient:'En transici\u00f3n \u2192 propio'},
-{id:'gavira',nm:'Manuel Gavira',sh:'MG',cl:'#A32D2D',x:22,y:30,frame:'Identidad, orden, anti-izquierda',risk:'Predecible \u2014 sin innovaci\u00f3n comunicativa',edge:'Electorado m\u00e1s fiel; no necesita convencer, solo movilizar',tone:'Emocional',orient:'Marco propio'}
+  {id:'moreno',nm:'Moreno Bonilla',sh:'MB',cl:'#185FA5',x:32,y:65,
+   frame:'Gestion, estabilidad, serenidad',
+   risk:'La crisis sanitaria lo empuja fuera de su cuadrante natural',
+   edge:'Ocupa solo el espacio racional - nadie le disputa',
+   tone:'Racional',orient:'Marco propio'},
+  {id:'montero',nm:'M. Jesus Montero',sh:'MJM',cl:'#D85A30',x:28,y:25,
+   frame:'Sanidad como derecho - referendum sanitario',
+   risk:'Frame monotematico; pasivo como exconsejera de Salud',
+   edge:'Potencia del issue dominante si controla la agenda',
+   tone:'Emocional',orient:'Marco propio'},
+  {id:'garcia',nm:'Jose I. Garcia',sh:'JIG',cl:'#0F6E56',x:18,y:20,
+   frame:'Clase social, proximidad, barrio obrero',
+   risk:'Partido pequeno, riesgo de invisibilidad mediatica',
+   edge:'Coherencia de registro; posicion mas diferenciada de la izquierda',
+   tone:'Emocional',orient:'Marco propio'},
+  {id:'maillo',nm:'Antonio Maillo',sh:'AM',cl:'#534AB7',x:42,y:28,
+   frame:'Unidad de la izquierda, alternativa al PP',
+   risk:'Semanas consumidas en negociacion; falta relato propio mas alla de la coalicion',
+   edge:'Conocimiento territorial; coalicion de siete partidos cerrada',
+   tone:'Emocional',orient:'En transicion hacia propio'},
+  {id:'gavira',nm:'Manuel Gavira',sh:'MG',cl:'#A32D2D',x:22,y:30,
+   frame:'Identidad, orden, anti-izquierda',
+   risk:'Predecible - sin innovacion comunicativa',
+   edge:'Electorado mas fiel; no necesita convencer, solo movilizar',
+   tone:'Emocional',orient:'Marco propio'}
 ];
-const G=document.getElementById('G'),P=document.getElementById('P'),Det=document.getElementById('D'),DX=document.getElementById('DX');
+
+const G=document.getElementById('G17'),P=document.getElementById('P17'),Det=document.getElementById('D17'),DX=document.getElementById('DX17');
 let sel=null;
+
 C.forEach(c=>{
-  const el=document.createElement('div');el.className='cd';el.id='c-'+c.id;
+  const el=document.createElement('div');
+  el.className='cd17';el.id='c17-'+c.id;
   el.style.left=c.x+'%';el.style.top=c.y+'%';
   el.dataset.x=c.x;el.dataset.y=c.y;
-  el.innerHTML='<div class="dot" style="background:'+c.cl+'">'+c.sh+'</div><div class="nm">'+c.nm+'</div><div class="fr">'+c.frame+'</div>';
-  el.addEventListener('click',e=>{if(!moved){selectC(c.id);}});
+  el.innerHTML='<div class="dot17" style="background:'+c.cl+'">'+c.sh+'</div><div class="nm17">'+c.nm+'</div>';
+  let moved=false;
+  el.addEventListener('click',()=>{if(!moved)selectC(c.id);});
+  drag(el,()=>{moved=true;upDX();},()=>{moved=false;});
   G.appendChild(el);
-  drag(el);
-  const btn=document.createElement('button');btn.className='pb';btn.id='pb-'+c.id;
-  btn.innerHTML='<div class="pd" style="background:'+c.cl+'"></div>'+c.nm;
+  const btn=document.createElement('button');
+  btn.className='pb17';btn.id='pb17-'+c.id;
+  btn.innerHTML='<div class="pd17" style="background:'+c.cl+'"></div>'+c.nm;
   btn.onclick=()=>selectC(c.id);
   P.appendChild(btn);
 });
-let moved=false;
+
 function selectC(id){
-  document.querySelectorAll('.cd').forEach(e=>e.classList.remove('sel'));
-  document.querySelectorAll('.pb').forEach(e=>e.classList.remove('act'));
-  if(sel===id){sel=null;Det.classList.remove('vis');return;}
+  document.querySelectorAll('.cd17').forEach(e=>e.classList.remove('sel17'));
+  document.querySelectorAll('.pb17').forEach(e=>e.classList.remove('act17'));
+  if(sel===id){sel=null;Det.classList.remove('vis17');return;}
   sel=id;
-  document.getElementById('c-'+id).classList.add('sel');
-  document.getElementById('pb-'+id).classList.add('act');
+  document.getElementById('c17-'+id).classList.add('sel17');
+  document.getElementById('pb17-'+id).classList.add('act17');
   const c=C.find(x=>x.id===id);
-  Det.classList.add('vis');
-  Det.innerHTML='<div class="det-h"><div class="pd" style="background:'+c.cl+'"></div><span>'+c.nm+'</span></div><div class="det-r"><dt>Frame</dt><dd>'+c.frame+'</dd><dt>Tono</dt><dd>'+c.tone+'</dd><dt>Orientaci\u00f3n</dt><dd>'+c.orient+'</dd><dt>Ventaja</dt><dd>'+c.edge+'</dd><dt>Riesgo</dt><dd>'+c.risk+'</dd></div>';
+  Det.classList.add('vis17');
+  Det.innerHTML='<div class="det-h17"><div class="pd17" style="background:'+c.cl+'"></div><span>'+c.nm+'</span></div>'
+    +'<div class="det-r17">'
+    +'<dt>Frame</dt><dd>'+c.frame+'</dd>'
+    +'<dt>Tono</dt><dd>'+c.tone+'</dd>'
+    +'<dt>Orientacion</dt><dd>'+c.orient+'</dd>'
+    +'<dt>Ventaja</dt><dd>'+c.edge+'</dd>'
+    +'<dt>Riesgo</dt><dd>'+c.risk+'</dd>'
+    +'</div>';
 }
-function drag(el){
+
+function drag(el,onMove,onStart){
   let d=false,sx,sy,sl,st;
-  const start=(ex,ey)=>{d=true;moved=false;sx=ex;sy=ey;sl=parseFloat(el.style.left);st=parseFloat(el.style.top);el.style.transition='none';};
+  const start=(ex,ey)=>{
+    d=true;if(onStart)onStart();
+    sx=ex;sy=ey;
+    sl=parseFloat(el.style.left);st=parseFloat(el.style.top);
+    el.style.transition='none';
+  };
   const move=(ex,ey)=>{
     if(!d)return;
     const r=G.getBoundingClientRect();
     const dx=((ex-sx)/r.width)*100,dy=((ey-sy)/r.height)*100;
-    if(Math.abs(dx)>1||Math.abs(dy)>1)moved=true;
+    if(Math.abs(dx)>1||Math.abs(dy)>1){if(onMove)onMove();}
     const nx=Math.max(5,Math.min(95,sl+dx)),ny=Math.max(5,Math.min(95,st+dy));
-    el.style.left=nx+'%';el.style.top=ny+'%';el.dataset.x=nx;el.dataset.y=ny;
-    upDX();
+    el.style.left=nx+'%';el.style.top=ny+'%';
+    el.dataset.x=nx;el.dataset.y=ny;
   };
   const end=()=>{d=false;el.style.transition='';};
   el.addEventListener('mousedown',e=>{e.preventDefault();start(e.clientX,e.clientY);});
   el.addEventListener('touchstart',e=>{e.preventDefault();start(e.touches[0].clientX,e.touches[0].clientY);},{passive:false});
   document.addEventListener('mousemove',e=>{if(d)move(e.clientX,e.clientY);});
-  document.addEventListener('touchmove',e=>{if(d){move(e.touches[0].clientX,e.touches[0].clientY);}},{passive:false});
+  document.addEventListener('touchmove',e=>{if(d)move(e.touches[0].clientX,e.touches[0].clientY);},{passive:false});
   document.addEventListener('mouseup',end);
   document.addEventListener('touchend',end);
 }
+
 function upDX(){
-  const pos=C.map(c=>{const el=document.getElementById('c-'+c.id);return{nm:c.nm,sh:c.sh,cl:c.cl,x:parseFloat(el.dataset.x),y:parseFloat(el.dataset.y)};});
+  const pos=C.map(c=>{
+    const el=document.getElementById('c17-'+c.id);
+    return{nm:c.nm,sh:c.sh,x:parseFloat(el.dataset.x||c.x),y:parseFloat(el.dataset.y||c.y)};
+  });
   const qn={tl:'emocional + marco propio',tr:'emocional + reactivo',bl:'racional + marco propio',br:'racional + reactivo'};
   const qs={tl:[],tr:[],bl:[],br:[]};
   pos.forEach(p=>{const qx=p.x<50?'l':'r',qy=p.y<50?'t':'b';qs[qy+qx].push(p);});
   let h='';
   Object.entries(qs).forEach(([k,v])=>{
-    if(v.length>=3)h+='<p><span class="tag tag-sat">Saturaci\u00f3n</span>Tres o m\u00e1s candidatos en <b>'+qn[k]+'</b>: '+v.map(p=>p.sh).join(', ')+'. Compiten por el mismo espacio comunicativo. Se neutralizan en visibilidad.</p>';
+    if(v.length>=3)h+='<p><span class="tag17 tag-sat17">Saturacion</span>Tres o mas candidatos en <b>'+qn[k]+'</b>: '+v.map(p=>p.sh).join(', ')+'. Se neutralizan en visibilidad.</p>';
   });
   Object.entries(qs).forEach(([k,v])=>{
-    if(v.length===0)h+='<p><span class="tag tag-gap">Hueco</span>El cuadrante <b>'+qn[k]+'</b> est\u00e1 vac\u00edo. Espacio comunicativo disponible para quien lo reclame.</p>';
+    if(v.length===0)h+='<p><span class="tag17 tag-gap17">Hueco</span>El cuadrante <b>'+qn[k]+'</b> esta vacio. Espacio disponible para quien lo reclame.</p>';
   });
   const react=pos.filter(p=>p.x>68);
-  if(react.length>0)h+='<p><span class="tag tag-react">Alerta reactiva</span>'+react.map(p=>p.sh).join(', ')+' en zona de alta reactividad. Su comunicaci\u00f3n responde m\u00e1s al marco ajeno que al propio.</p>';
+  if(react.length>0)h+='<p><span class="tag17 tag-react17">Alerta reactiva</span>'+react.map(p=>p.sh).join(', ')+' en zona de alta reactividad.</p>';
   const pairs=[];
-  for(let i=0;i<pos.length;i++){for(let j=i+1;j<pos.length;j++){
+  for(let i=0;i<pos.length;i++)for(let j=i+1;j<pos.length;j++){
     const dist=Math.sqrt(Math.pow(pos[i].x-pos[j].x,2)+Math.pow(pos[i].y-pos[j].y,2));
     if(dist<13)pairs.push([pos[i],pos[j]]);
-  }}
-  pairs.forEach(([a,b])=>{h+='<p><span class="tag tag-over">Solapamiento</span>'+a.sh+' y '+b.sh+' ocupan pr\u00e1cticamente el mismo espacio. Compiten por la misma atenci\u00f3n con el mismo registro.</p>';});
+  }
+  pairs.forEach(([a,b])=>{h+='<p><span class="tag17 tag-over17">Solapamiento</span>'+a.sh+' y '+b.sh+' compiten por la misma atencion con el mismo registro.</p>';});
   const lonely=Object.entries(qs).filter(([k,v])=>v.length===1);
-  lonely.forEach(([k,v])=>{h+='<p><span class="tag tag-gap">Diferenciaci\u00f3n</span>'+v[0].sh+' ocupa en solitario el cuadrante <b>'+qn[k]+'</b>. Ventaja competitiva: no tiene rival directo en ese registro.</p>';});
-  if(!h)h='<p>Distribuci\u00f3n equilibrada. Cada candidato ocupa un espacio comunicativo diferenciado.</p>';
+  lonely.forEach(([k,v])=>{h+='<p><span class="tag17 tag-gap17">Diferenciacion</span>'+v[0].sh+' ocupa en solitario el cuadrante <b>'+qn[k]+'</b>. Sin rival directo en ese registro.</p>';});
+  if(!h)h='<p>Distribucion equilibrada. Cada candidato ocupa un espacio comunicativo diferenciado.</p>';
   DX.innerHTML=h;
 }
 upDX();
+})();
 </script>
+</body>
+</html>
